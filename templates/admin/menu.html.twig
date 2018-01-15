@@ -1,0 +1,13 @@
+{% extends '@KnpMenu/menu.html.twig' %}
+
+{% block label %}
+    {% if item.getExtra('icon', false) %}
+        <i class="fa {{ item.getExtra('icon') }}"></i>
+    {% endif %}
+    {% if options.allow_safe_labels and item.getExtra('safe_label', false) %}
+        {{ item.label|raw }}
+    {% else %}
+        {{ item.label }}
+    {% endif %}
+{% endblock %}
+

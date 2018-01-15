@@ -1,0 +1,29 @@
+{
+  "name": "symfony4-glynn-admin",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "encore dev --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/disjfa/symfony4-glynn-admin.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/symfony/skeleton/issues"
+  },
+  "homepage": "https://github.com/symfony/skeleton#readme",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.17.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "webpack-notifier": "^1.5.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.3",
+    "glynn-admin": "^0.1.7"
+  }
+}
