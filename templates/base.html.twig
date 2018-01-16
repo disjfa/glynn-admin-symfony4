@@ -11,6 +11,65 @@
     <link rel="stylesheet" href="{{ asset('build/site.css') }}">
 </head>
 <body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{{ path('home_index') }}">Glynn site</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                {% if app.user %}
+                    <li class="nav-item">
+                        <a href="{{ path('fos_user_profile_show') }}" class="nav-link">
+                            <i class="fa fa-user"></i>
+                            {{ app.user.username }}
+                        </a>
+                    </li>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li class="nav-item">
+                            <a href="{{ path('admin_dashboard_index') }}" class="nav-link">
+                                <i class="fa fa-tachometer"></i>
+                                {{ 'app.admin' | trans }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% else %}
+                    <li class="nav-item">
+                        <a href="{{ path('fos_user_security_login') }}" class="nav-link">
+                            {{ 'app.login' | trans }}
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
 {% block body %}{% endblock %}
 {% block javascripts %}
     <script src="{{ asset('build/site.js') }}"></script>

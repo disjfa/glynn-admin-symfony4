@@ -1,0 +1,23 @@
+{% extends "admin.html.twig" %}
+
+{% block title %}
+    Create user - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div class="bg-dark text-white py-3">
+        <div class="container">
+            <h1>User</h1>
+        </div>
+    </div>
+    <div class="container">
+        <br>
+        {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button type="submit" class="btn btn-primary">
+            <i class="fa fa-floppy-o"></i>
+            Save
+        </button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

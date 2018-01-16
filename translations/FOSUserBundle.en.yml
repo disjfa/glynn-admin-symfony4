@@ -1,0 +1,7 @@
+layout.logged_in_as: Logged in as
+layout.logout: Logout
+layout.login: Login
+security.login.username: Username
+security.login.password: Password
+security.login.remember_me: Remember me
+security.login.submit: Login

@@ -24,6 +24,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta.3",
-    "glynn-admin": "^0.1.7"
+    "font-awesome": "^4.7.0",
+    "glynn-admin": "^0.1.7",
+    "ryoko-headers": "^0.1.3"
   }
 }

@@ -1,6 +1,7 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    locale: 'en'
 
 services:
     # default configuration for services in *this* file
@@ -25,7 +26,11 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    App\Menu\MainBuilder:
+    App\Menu\AdminMenuBuilder:
         tags:
           - { name: 'knp_menu.menu_builder', method: 'build', alias: 'glynn-admin' }
 
+    App\Menu\Admin\UserMenuListener:
+        autowire: true
+        tags:
+          - { name: 'kernel.event_listener', event: 'glynn_admin.menu_configure', method: 'onMenuConfigure', priority: -50 }

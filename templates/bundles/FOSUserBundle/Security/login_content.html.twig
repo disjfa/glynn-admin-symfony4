@@ -1,0 +1,60 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+        <form action="{{ path("fos_user_security_check") }}" method="post">
+            {% if csrf_token %}
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+            {% endif %}
+
+            <div class="card bg-light">
+                <div class="card-header bg-primary text-white   ">
+                    <i class="fa fa-user"></i>
+                    Login
+                </div>
+                <div class="card-body">
+                    {% if error %}
+                        <div class="alert alert-warning">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+                    <div class="form-group">
+                        <label for="username">{{ 'security.login.username'|trans }}</label>
+                        <input type="text" id="username" name="_username" value="{{ last_username }}"
+                               required="required" autocomplete="username" class="form-control">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="password">{{ 'security.login.password'|trans }}</label>
+                        <input type="password" id="password" name="_password" required="required"
+                               autocomplete="current-password" class="form-control">
+
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" id="remember_me" name="_remember_me" value="on"
+                                   class="custom-control-input">
+                            <label class="custom-control-label" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-sign-in"></i>
+                        {{ 'security.login.submit'|trans }}
+                    </button>
+
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="text-md-center">
+                        <p>
+                            <a href="{{ path('fos_user_resetting_request') }}">
+                                Forgot your password?
+                            </a>
+                        </p>
+                        <p>
+                            No account? <a href="{{ path('fos_user_registration_register') }}">create one</a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

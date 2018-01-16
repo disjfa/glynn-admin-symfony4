@@ -1,18 +1,22 @@
 <?php
 
-namespace App\Controller;
-
+namespace App\Controller\Admin;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DashboardBundle extends Controller
+/**
+ * @Route("/admin")
+ */
+class DashboardController extends Controller
 {
     /**
-     * @Route("/admin", name="dashboard_index")
+     * @Route("/dashboard", name="admin_dashboard_index")
      */
     public function index()
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         return $this->render('dashboard/index.html.twig');
     }
 }
