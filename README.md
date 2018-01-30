@@ -2,11 +2,18 @@
 
 Basic starter template using symfony4.
 
-
 ## Instalation
 
 ```
 composer create-project disjfa/glynn-admin-symfony4 my_project
+cd my_project
+```
+
+## Create database
+
+```
+bin/console doctrine:database:create
+bin/console doctrine:migrations:migrate
 ```
 
 ## Generate site assets
