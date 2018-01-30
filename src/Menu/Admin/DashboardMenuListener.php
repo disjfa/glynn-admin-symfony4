@@ -7,7 +7,7 @@ use App\Menu\ConfigureMenuEvent;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Security\Core\Security;
 
-class UserMenuListener
+class DashboardMenuListener
 {
     /**
      * @var EntityManagerInterface
@@ -39,9 +39,8 @@ class UserMenuListener
     public function onMenuConfigure(ConfigureMenuEvent $event)
     {
         $menu = $event->getMenu();
-        $menu->addChild('users', [
-            'route' => 'admin_user_index',
-            'label' => 'Users',
-        ])->setExtra('icon', 'fa-users');
+        $menu->addChild('Dashboard', [
+            'route' => 'admin_dashboard_index',
+        ])->setExtra('icon', 'fa-tachometer');
     }
 }

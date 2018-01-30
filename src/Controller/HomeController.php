@@ -14,4 +14,20 @@ class HomeController extends Controller
     {
         return $this->render('home/index.html.twig');
     }
+
+    /**
+     * @Route("/dos", name="home_dos")
+     */
+    public function dos()
+    {
+        return $this->render('home/index.html.twig');
+    }
+
+    /**
+     * @Route("/tres", name="home_tres")
+     */
+    public function tres()
+    {
+        return $this->render('home/index.html.twig');
+    }
 }

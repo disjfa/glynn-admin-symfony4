@@ -9,7 +9,7 @@ use Knp\Menu\MenuFactory;
 use Knp\Menu\MenuItem;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class AdminMenuBuilder
+class SiteMenuBuilder
 {
     /**
      * @var ContainerInterface
@@ -49,12 +49,12 @@ class AdminMenuBuilder
     {
         $menu = $this->factory->createItem('root', [
             'childrenAttributes' => [
-                'class' => 'sidebar-menu',
+                'class' => 'navbar-nav mr-auto',
             ],
         ]);
 
         $this->container->get('event_dispatcher')->dispatch(
-            ConfigureMenuEvent::ADMIN,
+            ConfigureMenuEvent::SITE,
             new ConfigureMenuEvent($this->factory, $menu)
         );
 
@@ -65,11 +65,8 @@ class AdminMenuBuilder
 
     /**
      * @param MenuItem[] $children
-     * @param bool       $hasCurrent
-     *
-     * @return bool
      */
-    public function setupMenuData(array $children, $hasCurrent = false)
+    public function setupMenuData(array $children)
     {
         $childIndex = 0;
         foreach ($children as $child) {
@@ -79,24 +76,23 @@ class AdminMenuBuilder
                 $itemId = sprintf('menu-%d-%d', $child->getLevel(), $childIndex + 1);
 
                 $child->setUri('#'.$itemId);
-                $child->setAttribute('class', 'sidebar-sub');
+                $child->setAttribute('class', 'nav-item dropdown');
+                $child->setLinkAttribute('class', 'nav-link dropdown-toggle ');
 
-                $child->setLinkAttribute('data-toggle', 'collapse');
-                if ($this->matcher->isAncestor($child)) {
-                    $child->setChildrenAttribute('class', 'sidebar-sub collapse show');
-                    $child->setLinkAttribute('class', 'sidebar-link');
-                } else {
-                    $child->setLinkAttribute('class', 'sidebar-link collapsed');
-                    $child->setChildrenAttribute('class', 'sidebar-sub collapse');
-                }
+                $child->setLinkAttribute('data-toggle', 'dropdown');
+                $child->setChildrenAttribute('class', 'dropdown-menu');
+
                 $child->setChildrenAttribute('id', $itemId);
 
                 $this->setupMenuData($child->getChildren());
             } else {
-                $child->setLinkAttribute('class', 'sidebar-link');
+                if ($child->getLevel() > 1) {
+                    $child->setLinkAttribute('class', 'dropdown-item');
+                } else {
+                    $child->setLinkAttribute('class', 'nav-link ');
+                }
+                $child->setAttribute('class', 'nav-item');
             }
         }
-
-        return $hasCurrent;
     }
 }

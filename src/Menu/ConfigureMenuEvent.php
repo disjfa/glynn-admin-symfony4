@@ -8,7 +8,8 @@ use Symfony\Component\EventDispatcher\Event;
 
 class ConfigureMenuEvent extends Event
 {
-    const CONFIGURE = 'glynn_admin.menu_configure';
+    const ADMIN = 'glynn_admin.menu_configure';
+    const SITE = 'glynn_site.menu_configure';
     /**
      * @var FactoryInterface
      */

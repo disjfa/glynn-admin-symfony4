@@ -34,3 +34,18 @@ services:
         autowire: true
         tags:
           - { name: 'kernel.event_listener', event: 'glynn_admin.menu_configure', method: 'onMenuConfigure', priority: -50 }
+
+    App\Menu\Admin\DashboardMenuListener:
+        autowire: true
+        tags:
+          - { name: 'kernel.event_listener', event: 'glynn_admin.menu_configure', method: 'onMenuConfigure', priority: 999 }
+
+    App\Menu\SiteMenuBuilder:
+        tags:
+          - { name: 'knp_menu.menu_builder', method: 'build', alias: 'glynn-site' }
+
+    App\Menu\Site\HomeMenuListener:
+        autowire: true
+        tags:
+          - { name: 'kernel.event_listener', event: 'glynn_site.menu_configure', method: 'onMenuConfigure', priority: 999 }
+
