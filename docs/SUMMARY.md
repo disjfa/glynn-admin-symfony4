@@ -1,5 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
-* [Instalation](INSTALLATION.md)
+* [Basic usage](usage.md)
+* [Menu setup](menu.md)
+* [Dashboard](dashboard.md)
+* [Bundles](bundles.md)
+* [Create your own](create.md)
 

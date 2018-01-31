@@ -17,6 +17,8 @@ class DashboardExample
      */
     public function get($event)
     {
-        $event->getItems()->add($event->getTwig()->render('admin/dashboard/example.html.twig'));
+        $items = $event->getItems();
+        $twig = $event->getTwig();
+        $items->add($twig->render('admin/dashboard/example.html.twig'));
     }
 }
