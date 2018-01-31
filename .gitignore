@@ -12,6 +12,7 @@
 
 .idea
 node_modules
+_book
 /public/build/*
 
 ###> friendsofphp/php-cs-fixer ###

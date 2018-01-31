@@ -1,7 +1,7 @@
 {
   "name": "symfony4-glynn-admin",
   "version": "0.1.0",
-  "description": "",
+  "description": "A basic serup for an admin template using symfony4.",
   "main": "index.js",
   "scripts": {
     "dev": "encore dev --watch",
