@@ -6,7 +6,7 @@
             <h1>Hello glynn admin</h1>
         </div>
     </div>
-    {#{% for item in dashboardItems.items %}#}
-        {#{{ item | raw }}#}
-    {#{% endfor %}#}
+    {% for item in dashboardItems.items %}
+        {{ item | raw }}
+    {% endfor %}
 {% endblock %}

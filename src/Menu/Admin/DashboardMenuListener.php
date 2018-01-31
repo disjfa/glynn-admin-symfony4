@@ -41,6 +41,6 @@ class DashboardMenuListener
         $menu = $event->getMenu();
         $menu->addChild('Dashboard', [
             'route' => 'admin_dashboard_index',
-        ])->setExtra('icon', 'fa-tachometer');
+        ])->setExtra('icon', 'fa-tachometer-alt');
     }
 }

@@ -2,6 +2,9 @@
     "composer/semver": {
         "version": "1.4.2"
     },
+    "disjfa/glynn-theme-bundle": {
+        "version": "0.1.x-dev"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -91,6 +94,9 @@
     },
     "ocramius/proxy-manager": {
         "version": "2.2.0"
+    },
+    "ornicar/gravatar-bundle": {
+        "version": "1.2.0"
     },
     "paragonie/random_compat": {
         "version": "v2.0.11"

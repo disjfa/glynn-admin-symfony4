@@ -12,5 +12,6 @@ return [
     Symfony\Bundle\SecurityBundle\SecurityBundle::class => ['all' => true],
     FOS\UserBundle\FOSUserBundle::class => ['all' => true],
     Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle::class => ['all' => true],
-    App\Disjfa\GlynnTemplateBundle\GlynnTemplateBundle::class => ['all' => true],
+    Disjfa\GlynnTemplateBundle\GlynnTemplateBundle::class => ['all' => true],
+    Ornicar\GravatarBundle\OrnicarGravatarBundle::class => ['all' => true],
 ];

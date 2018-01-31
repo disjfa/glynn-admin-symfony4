@@ -1,11 +1,6 @@
 {
   "build/admin.css": "/build/admin.css",
   "build/admin.js": "/build/admin.js",
-  "build/site.css": "/build/site.css",
   "build/site.js": "/build/site.js",
-  "build/fonts/fontawesome-webfont.eot": "/build/fonts/fontawesome-webfont.674f50d2.eot",
-  "build/fonts/fontawesome-webfont.ttf": "/build/fonts/fontawesome-webfont.b06871f2.ttf",
-  "build/fonts/fontawesome-webfont.woff": "/build/fonts/fontawesome-webfont.fee66e71.woff",
-  "build/fonts/fontawesome-webfont.woff2": "/build/fonts/fontawesome-webfont.af7ae505.woff2",
-  "build/images/fontawesome-webfont.svg": "/build/images/fontawesome-webfont.912ec66d.svg"
+  "build/site.css": "/build/site.css"
 }

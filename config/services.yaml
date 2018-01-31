@@ -49,3 +49,6 @@ services:
         tags:
           - { name: 'kernel.event_listener', event: 'glynn_site.menu_configure', method: 'onMenuConfigure', priority: 999 }
 
+    App\Dashboard\DashboardExample:
+        tags:
+          - { name: 'kernel.event_listener', event: 'glynn_admin.dashboard_items', method: 'get' }
