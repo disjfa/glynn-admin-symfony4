@@ -2,8 +2,14 @@
     "composer/semver": {
         "version": "1.4.2"
     },
+    "crewlabs/unsplash": {
+        "version": "2.4.1"
+    },
     "disjfa/glynn-theme-bundle": {
         "version": "0.1.x-dev"
+    },
+    "disjfa/mozaic-bundle": {
+        "version": "0.1.0"
     },
     "doctrine/annotations": {
         "version": "1.0",
@@ -80,6 +86,18 @@
     "gecko-packages/gecko-php-unit": {
         "version": "v3.0"
     },
+    "guzzlehttp/guzzle": {
+        "version": "6.3.0"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.4.2"
+    },
+    "hughbertd/oauth2-unsplash": {
+        "version": "1.0.3"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -88,6 +106,9 @@
     },
     "knplabs/knp-menu-bundle": {
         "version": "v2.2.1"
+    },
+    "league/oauth2-client": {
+        "version": "2.3.0"
     },
     "ocramius/package-versions": {
         "version": "1.2.0"
@@ -109,6 +130,9 @@
     },
     "psr/container": {
         "version": "1.0.0"
+    },
+    "psr/http-message": {
+        "version": "1.0.1"
     },
     "psr/log": {
         "version": "1.0.2"
