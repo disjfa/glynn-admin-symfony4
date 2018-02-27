@@ -2,7 +2,7 @@
 let Encore = require('@symfony/webpack-encore');
 
 Encore
-  // the project directory where all compiled assets will be stored
+// the project directory where all compiled assets will be stored
   .setOutputPath('public/build/')
 
   // the public path used by the web server to access the previous directory
@@ -31,6 +31,11 @@ Encore
   // create hashed filenames (e.g. app.abc123.css)
   .enableVersioning(Encore.isProduction())
 ;
+
+if (Encore.isProduction()) {
+  // Enable post css loader
+  Encore.enablePostCssLoader();
+}
 
 // export the final configuration
 module.exports = Encore.getWebpackConfig();

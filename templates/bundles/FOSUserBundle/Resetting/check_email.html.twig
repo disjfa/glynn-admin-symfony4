@@ -1,0 +1,23 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    <div class="row justify-content-md-center py-3">
+        <div class="col-md-6">
+            <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+                <div class="card bg-light">
+                    <div class="card-header bg-primary text-white   ">
+                        <i class="fa fa-user"></i>
+                        Reset password
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            {{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

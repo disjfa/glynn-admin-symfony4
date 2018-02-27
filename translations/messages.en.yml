@@ -1,2 +1,4 @@
-app.admin: Admin
-app.login: Login
+app:
+  login: Login
+  admin: Admin
+  logout: Logout

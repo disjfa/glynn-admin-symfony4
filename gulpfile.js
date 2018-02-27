@@ -9,7 +9,7 @@ gulp.task('favicons', function () {
     developerName: 'disjfa',
     developerURL: 'http://disjfa.nl/',
     background: '#3d566e',
-    themeColor: '#34495e',
+    theme_color: '#ffffff',
     path: '/icons/',
     url: 'http://disjfa.nl/',
     display: 'standalone',

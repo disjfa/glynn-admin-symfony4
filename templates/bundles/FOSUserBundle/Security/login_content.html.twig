@@ -1,6 +1,6 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center py-3">
     <div class="col-md-6">
         <form action="{{ path("fos_user_security_check") }}" method="post">
             {% if csrf_token %}
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-sign-in"></i>
+                        <i class="fa fa-sign-in-alt"></i>
                         {{ 'security.login.submit'|trans }}
                     </button>
 
