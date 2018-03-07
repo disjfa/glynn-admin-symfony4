@@ -1,5 +1,6 @@
 // webpack.config.js
 let Encore = require('@symfony/webpack-encore');
+let WorkboxPlugin = require('workbox-webpack-plugin');
 
 Encore
 // the project directory where all compiled assets will be stored
@@ -30,6 +31,18 @@ Encore
 
   // create hashed filenames (e.g. app.abc123.css)
   .enableVersioning(Encore.isProduction())
+
+  // Add workbox plugin
+  .addPlugin(new WorkboxPlugin({
+    globDirectory: 'public',
+    globPatterns: ['**/*.{html,js,css,jpg,png,woff2,woff,ttf,json}'],
+    swSrc: './assets/sw.js',
+    swDest: './public/sw.js',
+    templatedUrls: { 'offline.html': 'url' },
+    clientsClaim: true,
+    skipWaiting: true
+  }))
+
 ;
 
 if (Encore.isProduction()) {

@@ -30,4 +30,12 @@ class HomeController extends Controller
     {
         return $this->render('home/index.html.twig');
     }
+
+    /**
+     * @Route("/offline.html", name="home_offline")
+     */
+    public function offline()
+    {
+        return $this->render('home/offline.html.twig');
+    }
 }
