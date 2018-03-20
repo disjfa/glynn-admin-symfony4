@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Basic usage](usage.md)
+* [Front end](usage.md)
 * [Menu setup](menu.md)
 * [Dashboard](dashboard.md)
 * [Bundles](bundles.md)

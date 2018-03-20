@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "encore dev --watch",
     "favicons": "gulp favicons",
-    "production": "encore production"
+    "production": "encore production",
+    "gitbook": "gitbook serve"
   },
   "repository": {
     "type": "git",
