@@ -1,5 +1,3 @@
-importScripts('workbox-sw.prod.v2.1.3.js');
-
 const workbox = new WorkboxSW({
   skipWaiting: true,
   clientsClaim: true

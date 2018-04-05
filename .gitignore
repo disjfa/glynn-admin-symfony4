@@ -14,6 +14,7 @@
 node_modules
 _book
 /public/build/*
+/public/sw.js
 
 ###> friendsofphp/php-cs-fixer ###
 .php_cs
