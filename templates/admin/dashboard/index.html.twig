@@ -1,11 +1,12 @@
 {% extends "admin.html.twig" %}
 
+{% trans_default_domain 'admin' %}
+
+{% block page_title_text %}
+    {{ 'admin.dashboard.page_title' | trans | desc('Hello glynn admin') }}
+{% endblock %}
+
 {% block body %}
-    <div class="bg-dark text-white py-3">
-        <div class="container">
-            <h1>Hello glynn admin</h1>
-        </div>
-    </div>
     {% for item in dashboardItems.items %}
         {{ item | raw }}
     {% endfor %}

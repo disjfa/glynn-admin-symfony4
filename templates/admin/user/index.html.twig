@@ -1,24 +1,25 @@
 {% extends "admin.html.twig" %}
 
+{% trans_default_domain 'admin' %}
+
 {% block title %}
-    Users - {{ parent() }}
+    {{ 'users.index.title' | trans | desc('Users') }} - {{ parent() }}
+{% endblock %}
+
+{% block page_title_text %}
+    {{ 'users.index.page_title' | trans | desc('Users') }}
 {% endblock %}
 
 {% block body %}
-    <div class="bg-dark text-white py-3">
-        <div class="container">
-            <h1>Users</h1>
-        </div>
-    </div>
     <div class="container">
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Enabled</th>
-                    <th>Last login</th>
+                    <th>{{ 'users.table.username' | trans | desc('Username') }}</th>
+                    <th>{{ 'users.table.email' | trans | desc('Email') }}</th>
+                    <th>{{ 'users.table.enabled' | trans | desc('Enabled') }}</th>
+                    <th>{{ 'users.table.last_lgin' | trans  | desc('Last login') }}</th>
                 </tr>
                 </thead>
                 <tbody>

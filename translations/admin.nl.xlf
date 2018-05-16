@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="nl" trgLang="nl">
+  <file id="admin.nl">
+    <unit id="wglJKFL" name="admin.dashboard.page_title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/dashboard/index.html.twig:6</note>
+        <note category="desc" priority="1">Hello glynn admin</note>
+      </notes>
+      <segment>
+        <source>admin.dashboard.page_title</source>
+        <target>Hallo glynn admin</target>
+      </segment>
+    </unit>
+    <unit id="U3tnVir" name="user.form.title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/form.html.twig:6</note>
+        <note category="desc" priority="1">User</note>
+      </notes>
+      <segment>
+        <source>user.form.title</source>
+        <target>Gebruiker</target>
+      </segment>
+    </unit>
+    <unit id="GlecRiG" name="user.form.page_title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/form.html.twig:10</note>
+        <note category="desc" priority="1">User</note>
+      </notes>
+      <segment>
+        <source>user.form.page_title</source>
+        <target>Gebruiker</target>
+      </segment>
+    </unit>
+    <unit id="Tn9CwN9" name="user.button.save">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/form.html.twig:19</note>
+        <note category="desc" priority="1">Save</note>
+      </notes>
+      <segment>
+        <source>user.button.save</source>
+        <target>Opslaan</target>
+      </segment>
+    </unit>
+    <unit id="T4PiYoe" name="user.show_user.title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/show.html.twig:6</note>
+        <note category="desc" priority="1">User %username%</note>
+      </notes>
+      <segment>
+        <source>user.show_user.title</source>
+        <target>Gebruiker %username%</target>
+      </segment>
+    </unit>
+    <unit id="Be96Jnt" name="user.show_user.page_title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/show.html.twig:10</note>
+        <note category="desc" priority="1">User %username%</note>
+      </notes>
+      <segment>
+        <source>user.show_user.page_title</source>
+        <target>Gebruiker %username%</target>
+      </segment>
+    </unit>
+    <unit id=".NPTzjH" name="user.button.edit_user">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/show.html.twig:30</note>
+        <note category="desc" priority="1">Edit user</note>
+      </notes>
+      <segment>
+        <source>user.button.edit_user</source>
+        <target>Bewerk gebruiker</target>
+      </segment>
+    </unit>
+    <unit id="1H0cY_J" name="user.choice.role_user">
+      <notes>
+        <note category="file-source" priority="1">src/Form/Type/UserType.php:42</note>
+      </notes>
+      <segment>
+        <source>user.choice.role_user</source>
+        <target>Gebruikers rol</target>
+      </segment>
+    </unit>
+    <unit id="sP1CS8D" name="user.choice.role_admin">
+      <notes>
+        <note category="file-source" priority="1">src/Form/Type/UserType.php:42</note>
+      </notes>
+      <segment>
+        <source>user.choice.role_admin</source>
+        <target>Admin rol</target>
+      </segment>
+    </unit>
+    <unit id="3eDnpzk" name="user.label.username">
+      <notes>
+        <note category="file-source" priority="1">src/Form/Type/UserType.php:33</note>
+      </notes>
+      <segment>
+        <source>user.label.username</source>
+        <target>Gebruikersnaam</target>
+      </segment>
+    </unit>
+    <unit id="JNryrvg" name="user.label.email">
+      <notes>
+        <note category="file-source" priority="1">src/Form/Type/UserType.php:37</note>
+      </notes>
+      <segment>
+        <source>user.label.email</source>
+        <target>Email</target>
+      </segment>
+    </unit>
+    <unit id="mnGh1V8" name="user.label.roles">
+      <notes>
+        <note category="file-source" priority="1">src/Form/Type/UserType.php:41</note>
+      </notes>
+      <segment>
+        <source>user.label.roles</source>
+        <target>Rollen</target>
+      </segment>
+    </unit>
+    <unit id="vLWpzeo" name="menu.dashboard">
+      <notes>
+        <note category="file-source" priority="1">src/Menu/Admin/DashboardMenuListener.php:32</note>
+      </notes>
+      <segment>
+        <source>menu.dashboard</source>
+        <target>Dashboard</target>
+      </segment>
+    </unit>
+    <unit id="qm7xyXZ" name="menu.translations">
+      <notes>
+        <note category="file-source" priority="1">src/Menu/Admin/TranslatorMenuListener.php:44</note>
+      </notes>
+      <segment>
+        <source>menu.translations</source>
+        <target>Vertalingen</target>
+      </segment>
+    </unit>
+    <unit id="fw94.4n" name="menu.users">
+      <notes>
+        <note category="file-source" priority="1">src/Menu/Admin/UserMenuListener.php:33</note>
+      </notes>
+      <segment>
+        <source>menu.users</source>
+        <target>Gebruikers</target>
+      </segment>
+    </unit>
+    <unit id="MkCYi6Q" name="users.index.title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:6</note>
+        <note category="desc" priority="1">Users</note>
+      </notes>
+      <segment>
+        <source>users.index.title</source>
+        <target>Gebruikers</target>
+      </segment>
+    </unit>
+    <unit id="KkGjn7A" name="users.index.page_title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:10</note>
+        <note category="desc" priority="1">Users</note>
+      </notes>
+      <segment>
+        <source>users.index.page_title</source>
+        <target>Gebruikers</target>
+      </segment>
+    </unit>
+    <unit id="d9wWGUE" name="users.table.username">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:19</note>
+        <note category="desc" priority="1">Username</note>
+      </notes>
+      <segment>
+        <source>users.table.username</source>
+        <target>Gebruikernaam</target>
+      </segment>
+    </unit>
+    <unit id="i1HbhNh" name="users.table.email">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:20</note>
+        <note category="desc" priority="1">Email</note>
+      </notes>
+      <segment>
+        <source>users.table.email</source>
+        <target>Email</target>
+      </segment>
+    </unit>
+    <unit id="P4n0wUr" name="users.table.enabled">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:21</note>
+        <note category="desc" priority="1">Enabled</note>
+      </notes>
+      <segment>
+        <source>users.table.enabled</source>
+        <target>Aan</target>
+      </segment>
+    </unit>
+    <unit id="vDU9n03" name="users.table.last_lgin">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:22</note>
+        <note category="desc" priority="1">Last login</note>
+      </notes>
+      <segment>
+        <source>users.table.last_lgin</source>
+        <target>Laate login</target>
+      </segment>
+    </unit>
+    <unit id="okluDoz" name="users.translation.page_title">
+      <notes>
+        <note category="file-source" priority="1">templates/bundles/TranslationBundle/WebUI/base.html.twig:6</note>
+        <note category="desc" priority="1">Translations</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>users.translation.page_title</source>
+        <target>Vertalingen</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

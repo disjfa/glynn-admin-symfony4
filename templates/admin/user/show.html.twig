@@ -1,15 +1,16 @@
 {% extends "admin.html.twig" %}
 
+{% trans_default_domain 'admin' %}
+
 {% block title %}
-    User {{ user.username }} - {{ parent() }}
+    {{ 'user.show_user.title' | trans({'%username%': user.username }) | desc('User %username%') }} - {{ parent() }}
+{% endblock %}
+
+{% block page_title_text %}
+    {{ 'user.show_user.page_title' | trans({'%username%': user.username }) | desc('User %username%') }}
 {% endblock %}
 
 {% block body %}
-    <div class="bg-dark text-white py-3">
-        <div class="container">
-            <h1>User</h1>
-        </div>
-    </div>
     <div class="container">
         <br>
         <div class="row">
@@ -26,7 +27,7 @@
                 <div class="btn-group">
                     <a href="{{ path('admin_user_edit', {'user': user.id}) }}" class="btn btn-primary">
                         <i class="fa fa-pencil-alt"></i>
-                        Edit user
+                        {{ 'user.button.edit_user' | trans | desc('Edit user') }}
                     </a>
                 </div>
             </div>

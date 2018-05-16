@@ -1,22 +1,22 @@
 {% extends "admin.html.twig" %}
 
+{% trans_default_domain 'admin' %}
+
 {% block title %}
-    Create user - {{ parent() }}
+    {{ 'user.form.title' | trans | desc('User') }} - {{ parent() }}
+{% endblock %}
+
+{% block page_title_text %}
+    {{ 'user.form.page_title' | trans | desc('User') }}
 {% endblock %}
 
 {% block body %}
-    <div class="bg-dark text-white py-3">
-        <div class="container">
-            <h1>User</h1>
-        </div>
-    </div>
-    <div class="container">
-        <br>
+    <div class="container py-3">
         {{ form_start(form) }}
         {{ form_rest(form) }}
         <button type="submit" class="btn btn-primary">
             <i class="fa fa-save"></i>
-            Save
+            {{ 'user.button.save' | trans | desc('Save') }}
         </button>
         {{ form_end(form) }}
     </div>

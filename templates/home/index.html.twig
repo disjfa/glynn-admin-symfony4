@@ -1,20 +1,22 @@
 {% extends "base.html.twig" %}
 
+{% trans_default_domain 'site' %}
+
 {% block body %}
     <div class="ryoko" style="background-image: url(https://images.unsplash.com/photo-1471500466955-85aecf33f71f?dpr=1&auto=compress,format&fit=crop&w=1200&h=800&q=80&cs=tinysrgb&crop=&bg=)">
         <div class="ryoko-shade ryoko-body">
             <div class="ryoko-faded ryoko-shadow text-white px-3 py-3 my-3">
-                <h3>Glynn site</h3>
-                <p>Welcome to glynn site, lets play!</p>
+                <h3>{{ 'home.header.heading' | trans | desc('Glynn site') }}</h3>
+                <p>{{ 'home.header.paragraph' | trans | desc('Welcome to glynn site, lets play!') }}</p>
             </div>
         </div>
     </div>
     <div class="container py-3">
         <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, aperiam architecto deleniti dolorum ducimus eaque eligendi esse eum expedita, ipsa ipsam molestias optio rem repellendus sapiente sunt voluptate voluptatibus voluptatum!
+            {{ 'home.lead.paragraph' | trans | desc('Lorem ipsum dolor sit amet...') }}
         </p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloremque labore obcaecati? Aspernatur assumenda consequuntur cupiditate delectus enim est explicabo illo in magnam nemo non qui, repellat sit sunt voluptatibus.
+            {{ 'home.text.paragraph' | trans | desc('Lorem ipsum dolor sit amet...') }}
         </p>
     </div>
 {% endblock %}

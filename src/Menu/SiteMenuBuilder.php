@@ -41,11 +41,9 @@ class SiteMenuBuilder
     }
 
     /**
-     * @param array $options
-     *
      * @return ItemInterface
      */
-    public function build(array $options)
+    public function build()
     {
         $menu = $this->factory->createItem('root', [
             'childrenAttributes' => [

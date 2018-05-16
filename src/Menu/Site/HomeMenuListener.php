@@ -3,9 +3,25 @@
 namespace App\Menu\Site;
 
 use App\Menu\ConfigureMenuEvent;
+use Symfony\Component\Translation\TranslatorInterface;
 
 class HomeMenuListener
 {
+    /**
+     * @var TranslatorInterface
+     */
+    private $translator;
+
+    /**
+     * HomeMenuListener constructor.
+     *
+     * @param TranslatorInterface $translator
+     */
+    public function __construct(TranslatorInterface $translator)
+    {
+        $this->translator = $translator;
+    }
+
     /**
      * @param ConfigureMenuEvent $event
      */
@@ -15,7 +31,7 @@ class HomeMenuListener
 
         $menu->addChild('home', [
             'route' => 'home_index',
-            'label' => 'Home',
+            'label' => $this->translator->trans('menu.home', [], 'site'),
         ])->setExtra('icon', 'fa-home');
     }
 }

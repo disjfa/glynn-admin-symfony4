@@ -2,35 +2,24 @@
 
 namespace App\Menu\Admin;
 
-use App\Entity\User;
 use App\Menu\ConfigureMenuEvent;
-use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\Security\Core\Security;
+use Symfony\Component\Translation\TranslatorInterface;
 
 class DashboardMenuListener
 {
     /**
-     * @var EntityManagerInterface
+     * @var TranslatorInterface
      */
-    private $entityManager;
-
-    /**
-     * @var User
-     */
-    private $user;
+    private $translator;
 
     /**
      * MediaMenuListener constructor.
      *
-     * @param EntityManagerInterface $entityManager
-     * @param Security               $security
+     * @param TranslatorInterface $translator
      */
-    public function __construct(EntityManagerInterface $entityManager, Security $security)
+    public function __construct(TranslatorInterface $translator)
     {
-        $this->entityManager = $entityManager;
-        if (null !== $security->getToken() && $security->getToken()->getUser() instanceof User) {
-            $this->user = $security->getToken()->getUser();
-        }
+        $this->translator = $translator;
     }
 
     /**
@@ -39,7 +28,8 @@ class DashboardMenuListener
     public function onMenuConfigure(ConfigureMenuEvent $event)
     {
         $menu = $event->getMenu();
-        $menu->addChild('Dashboard', [
+        $menu->addChild('dashboard', [
+            'label' => $this->translator->trans('menu.dashboard', [], 'admin'),
             'route' => 'admin_dashboard_index',
         ])->setExtra('icon', 'fa-tachometer-alt');
     }

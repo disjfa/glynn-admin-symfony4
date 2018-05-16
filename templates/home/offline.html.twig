@@ -1,18 +1,20 @@
 {% extends "base.html.twig" %}
 
+{% trans_default_domain 'site' %}
+
 {% block body %}
     <div class="bg-info">
         <div class="py-3 container text-light">
-            <h3>Offline</h3>
-            <p>Oh! Looks like you are offline</p>
+            <h3>{{ 'home.offline.heading' | trans | desc('Offline') }}</h3>
+            <p>{{ 'home.offline.paragraph0' | trans | desc('Oh! Looks like you are offline') }}</p>
         </div>
     </div>
     <div class="container py-3">
         <p class="lead">
-            When you are in offline mode you get redirected here.
+            {{ 'home.offline.paragraph1' | trans | desc('When you are in offline mode you get redirected here.') }}
         </p>
         <p>
-            When you are back online you can check out the entire site again. Sorry for now!
+            {{ 'home.offline.paragraph2' | trans | desc('When you are back online you can check out the entire site again. Sorry for now!') }}
         </p>
     </div>
 {% endblock %}
