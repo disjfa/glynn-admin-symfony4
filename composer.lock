@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "59a63f1dc23bd9c69aa01019a2aedc1b",
+    "content-hash": "07a9534db970672593180a9d5cd069b8",
     "packages": [
         {
             "name": "disjfa/glynn-theme-bundle",
-            "version": "dev-master",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/disjfa/glynn-theme-bundle.git",
-                "reference": "de6b0f678d234ba01f4cd2c343e5712ef5d2bb7f"
+                "reference": "502dbd2965276b5c3731ca7c4b727e7686c7b5c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/disjfa/glynn-theme-bundle/zipball/de6b0f678d234ba01f4cd2c343e5712ef5d2bb7f",
-                "reference": "de6b0f678d234ba01f4cd2c343e5712ef5d2bb7f",
+                "url": "https://api.github.com/repos/disjfa/glynn-theme-bundle/zipball/502dbd2965276b5c3731ca7c4b727e7686c7b5c9",
+                "reference": "502dbd2965276b5c3731ca7c4b727e7686c7b5c9",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
             "keywords": [
                 "Theme bundle"
             ],
-            "time": "2018-05-22T22:04:32+00:00"
+            "time": "2018-05-16T20:30:29+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -5493,7 +5493,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "disjfa/glynn-theme-bundle": 20,
         "symfony/lts": 20
     },
     "prefer-stable": false,
