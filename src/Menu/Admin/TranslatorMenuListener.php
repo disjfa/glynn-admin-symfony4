@@ -3,7 +3,6 @@
 namespace App\Menu\Admin;
 
 use App\Menu\ConfigureMenuEvent;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 

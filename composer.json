@@ -8,7 +8,6 @@
         "php": "^7.1.3",
         "ext-iconv": "*",
         "disjfa/glynn-theme-bundle": "dev-master",
-        "friendsofphp/php-cs-fixer": "^2.10",
         "friendsofsymfony/user-bundle": "~2.0",
         "knplabs/knp-menu-bundle": "^2.2",
         "ornicar/gravatar-bundle": "^1.2",
@@ -29,6 +28,7 @@
         "symfony/yaml": "^4.0"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.12",
         "symfony/dotenv": "^4.0"
     },
     "config": {
