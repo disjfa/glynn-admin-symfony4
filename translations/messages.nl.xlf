@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="nl" trgLang="nl">
+  <file id="messages.nl">
+    <unit id="okluDoz" name="users.translation.page_title">
+      <notes>
+        <note category="file-source" priority="1">templates/bundles/TranslationBundle/WebUI/base.html.twig:4</note>
+        <note category="desc" priority="1">Translations</note>
+      </notes>
+      <segment>
+        <source>users.translation.page_title</source>
+        <target>Vertalingen</target>
+      </segment>
+    </unit>
+    <unit id="wglJKFL" name="admin.dashboard.page_title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/dashboard/index.html.twig:4</note>
+        <note category="desc" priority="1">Hello glynn admin</note>
+      </notes>
+      <segment>
+        <source>admin.dashboard.page_title</source>
+        <target>Hallo glynn admin</target>
+      </segment>
+    </unit>
+    <unit id="U3tnVir" name="user.form.title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/form.html.twig:4</note>
+        <note category="desc" priority="1">User</note>
+      </notes>
+      <segment>
+        <source>user.form.title</source>
+        <target>Gebruikers</target>
+      </segment>
+    </unit>
+    <unit id="GlecRiG" name="user.form.page_title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/form.html.twig:8</note>
+        <note category="desc" priority="1">User</note>
+      </notes>
+      <segment>
+        <source>user.form.page_title</source>
+        <target>Gebruikers</target>
+      </segment>
+    </unit>
+    <unit id="Tn9CwN9" name="user.button.save">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/form.html.twig:17</note>
+        <note category="desc" priority="1">Save</note>
+      </notes>
+      <segment>
+        <source>user.button.save</source>
+        <target>Opslaan</target>
+      </segment>
+    </unit>
+    <unit id="MkCYi6Q" name="users.index.title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:4</note>
+        <note category="desc" priority="1">Users</note>
+      </notes>
+      <segment>
+        <source>users.index.title</source>
+        <target>Gebruikers</target>
+      </segment>
+    </unit>
+    <unit id="KkGjn7A" name="users.index.page_title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:8</note>
+        <note category="desc" priority="1">Users</note>
+      </notes>
+      <segment>
+        <source>users.index.page_title</source>
+        <target>Gebruikers</target>
+      </segment>
+    </unit>
+    <unit id="d9wWGUE" name="users.table.username">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:17</note>
+        <note category="desc" priority="1">Username</note>
+      </notes>
+      <segment>
+        <source>users.table.username</source>
+        <target>Gebruikersnaam</target>
+      </segment>
+    </unit>
+    <unit id="i1HbhNh" name="users.table.email">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:18</note>
+        <note category="desc" priority="1">Email</note>
+      </notes>
+      <segment>
+        <source>users.table.email</source>
+        <target>Email</target>
+      </segment>
+    </unit>
+    <unit id="P4n0wUr" name="users.table.enabled">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:19</note>
+        <note category="desc" priority="1">Enabled</note>
+      </notes>
+      <segment>
+        <source>users.table.enabled</source>
+        <target>Ingeschakeld</target>
+      </segment>
+    </unit>
+    <unit id="vDU9n03" name="users.table.last_lgin">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/index.html.twig:20</note>
+        <note category="desc" priority="1">Last login</note>
+      </notes>
+      <segment>
+        <source>users.table.last_lgin</source>
+        <target>Laatste login</target>
+      </segment>
+    </unit>
+    <unit id="T4PiYoe" name="user.show_user.title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/show.html.twig:4</note>
+        <note category="desc" priority="1">User %username%</note>
+      </notes>
+      <segment>
+        <source>user.show_user.title</source>
+        <target>Gebruiker</target>
+      </segment>
+    </unit>
+    <unit id="Be96Jnt" name="user.show_user.page_title">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/show.html.twig:8</note>
+        <note category="desc" priority="1">User %username%</note>
+      </notes>
+      <segment>
+        <source>user.show_user.page_title</source>
+        <target>Gebruikers</target>
+      </segment>
+    </unit>
+    <unit id=".NPTzjH" name="user.button.edit_user">
+      <notes>
+        <note category="file-source" priority="1">templates/admin/user/show.html.twig:28</note>
+        <note category="desc" priority="1">Edit user</note>
+      </notes>
+      <segment>
+        <source>user.button.edit_user</source>
+        <target>Bewerk gebruker</target>
+      </segment>
+    </unit>
+    <unit id="HOz9dv7" name="home.header.heading">
+      <notes>
+        <note category="file-source" priority="1">templates/home/index.html.twig:7</note>
+        <note category="desc" priority="1">Glynn site</note>
+      </notes>
+      <segment>
+        <source>home.header.heading</source>
+        <target>Glynn site</target>
+      </segment>
+    </unit>
+    <unit id="Xt5EGnW" name="home.header.paragraph">
+      <notes>
+        <note category="file-source" priority="1">templates/home/index.html.twig:8</note>
+        <note category="desc" priority="1">Welcome to glynn site, lets play!</note>
+      </notes>
+      <segment>
+        <source>home.header.paragraph</source>
+        <target>Welkom bij glynn site, laten we spelen!</target>
+      </segment>
+    </unit>
+    <unit id="VycUE73" name="home.lead.paragraph">
+      <notes>
+        <note category="file-source" priority="1">templates/home/index.html.twig:14</note>
+        <note category="desc" priority="1">Lorem ipsum dolor sit amet...</note>
+      </notes>
+      <segment>
+        <source>home.lead.paragraph</source>
+        <target>Lorem ipsum dolor sit amet...</target>
+      </segment>
+    </unit>
+    <unit id="hO5_F95" name="home.text.paragraph">
+      <notes>
+        <note category="file-source" priority="1">templates/home/index.html.twig:17</note>
+        <note category="desc" priority="1">Lorem ipsum dolor sit amet...</note>
+      </notes>
+      <segment>
+        <source>home.text.paragraph</source>
+        <target>Lorem ipsum dolor sit amet...</target>
+      </segment>
+    </unit>
+    <unit id="7uFjkBg" name="home.offline.heading">
+      <notes>
+        <note category="file-source" priority="1">templates/home/offline.html.twig:6</note>
+        <note category="desc" priority="1">Offline</note>
+      </notes>
+      <segment>
+        <source>home.offline.heading</source>
+        <target>Offline</target>
+      </segment>
+    </unit>
+    <unit id="lkt5ok4" name="home.offline.paragraph0">
+      <notes>
+        <note category="file-source" priority="1">templates/home/offline.html.twig:7</note>
+        <note category="desc" priority="1">Oh! Looks like you are offline</note>
+      </notes>
+      <segment>
+        <source>home.offline.paragraph0</source>
+        <target>Oh! Het lijkt erop dat je offline bent</target>
+      </segment>
+    </unit>
+    <unit id="Yj8YT3o" name="home.offline.paragraph1">
+      <notes>
+        <note category="file-source" priority="1">templates/home/offline.html.twig:12</note>
+        <note category="desc" priority="1">When you are in offline mode you get redirected here.</note>
+      </notes>
+      <segment>
+        <source>home.offline.paragraph1</source>
+        <target>Als je offline bent word je hiernaartoe gestuurd.</target>
+      </segment>
+    </unit>
+    <unit id="D6N0k3f" name="home.offline.paragraph2">
+      <notes>
+        <note category="file-source" priority="1">templates/home/offline.html.twig:15</note>
+        <note category="desc" priority="1">When you are back online you can check out the entire site again. Sorry for now!</note>
+      </notes>
+      <segment>
+        <source>home.offline.paragraph2</source>
+        <target>Als je weer online bent kan je weer verder.</target>
+      </segment>
+    </unit>
+    <unit id="1H0cY_J" name="user.choice.role_user">
+      <notes>
+        <note category="file-source" priority="1">src/Form/Type/UserType.php:42</note>
+      </notes>
+      <segment>
+        <source>user.choice.role_user</source>
+        <target>Gebruikers rol</target>
+      </segment>
+    </unit>
+    <unit id="sP1CS8D" name="user.choice.role_admin">
+      <notes>
+        <note category="file-source" priority="1">src/Form/Type/UserType.php:42</note>
+      </notes>
+      <segment>
+        <source>user.choice.role_admin</source>
+        <target>Admin rol</target>
+      </segment>
+    </unit>
+    <unit id="3eDnpzk" name="user.label.username">
+      <notes>
+        <note category="file-source" priority="1">src/Form/Type/UserType.php:33</note>
+      </notes>
+      <segment>
+        <source>user.label.username</source>
+        <target>Gebruikersnaam</target>
+      </segment>
+    </unit>
+    <unit id="JNryrvg" name="user.label.email">
+      <notes>
+        <note category="file-source" priority="1">src/Form/Type/UserType.php:37</note>
+      </notes>
+      <segment>
+        <source>user.label.email</source>
+        <target>Email</target>
+      </segment>
+    </unit>
+    <unit id="mnGh1V8" name="user.label.roles">
+      <notes>
+        <note category="file-source" priority="1">src/Form/Type/UserType.php:41</note>
+      </notes>
+      <segment>
+        <source>user.label.roles</source>
+        <target>Rollen</target>
+      </segment>
+    </unit>
+    <unit id="iJAhVXd" name="admin.menu.dashboard">
+      <notes>
+        <note category="file-source" priority="1">src/Menu/Admin/DashboardMenuListener.php:32</note>
+      </notes>
+      <segment>
+        <source>admin.menu.dashboard</source>
+        <target>Dashboard</target>
+      </segment>
+    </unit>
+    <unit id="j3Dt6Fk" name="admin.menu.translations">
+      <notes>
+        <note category="file-source" priority="1">src/Menu/Admin/TranslatorMenuListener.php:44</note>
+      </notes>
+      <segment>
+        <source>admin.menu.translations</source>
+        <target>Vertalingen</target>
+      </segment>
+    </unit>
+    <unit id="MlBIe97" name="admin.menu.users">
+      <notes>
+        <note category="file-source" priority="1">src/Menu/Admin/UserMenuListener.php:33</note>
+      </notes>
+      <segment>
+        <source>admin.menu.users</source>
+        <target>Gebruikers</target>
+      </segment>
+    </unit>
+    <unit id="tITgZsF" name="site.menu.home">
+      <notes>
+        <note category="file-source" priority="1">src/Menu/Site/HomeMenuListener.php:34</note>
+      </notes>
+      <segment>
+        <source>site.menu.home</source>
+        <target>Home</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

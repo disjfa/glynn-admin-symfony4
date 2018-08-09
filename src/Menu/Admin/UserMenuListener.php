@@ -30,7 +30,7 @@ class UserMenuListener
         $menu = $event->getMenu();
         $menu->addChild('users', [
             'route' => 'admin_user_index',
-            'label' => $this->translator->trans('menu.users', [], 'admin'),
+            'label' => $this->translator->trans('admin.menu.users'),
         ])->setExtra('icon', 'fa-users');
     }
 }

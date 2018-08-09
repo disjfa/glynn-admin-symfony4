@@ -31,7 +31,7 @@ class HomeMenuListener
 
         $menu->addChild('home', [
             'route' => 'home_index',
-            'label' => $this->translator->trans('menu.home', [], 'site'),
+            'label' => $this->translator->trans('site.menu.home'),
         ])->setExtra('icon', 'fa-home');
     }
 }

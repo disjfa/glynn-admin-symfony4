@@ -41,7 +41,7 @@ class TranslatorMenuListener
         $menu = $event->getMenu();
         $menu->addChild('translations', [
             'route' => 'translation_index',
-            'label' => $this->translator->trans('menu.translations', [], 'admin'),
+            'label' => $this->translator->trans('admin.menu.translations'),
         ])->setExtra('icon', 'fa-language');
     }
 }

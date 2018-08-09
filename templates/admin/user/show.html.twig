@@ -1,7 +1,5 @@
 {% extends "admin.html.twig" %}
 
-{% trans_default_domain 'admin' %}
-
 {% block title %}
     {{ 'user.show_user.title' | trans({'%username%': user.username }) | desc('User %username%') }} - {{ parent() }}
 {% endblock %}

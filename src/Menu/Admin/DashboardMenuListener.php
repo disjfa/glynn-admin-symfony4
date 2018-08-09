@@ -29,7 +29,7 @@ class DashboardMenuListener
     {
         $menu = $event->getMenu();
         $menu->addChild('dashboard', [
-            'label' => $this->translator->trans('menu.dashboard', [], 'admin'),
+            'label' => $this->translator->trans('admin.menu.dashboard'),
             'route' => 'admin_dashboard_index',
         ])->setExtra('icon', 'fa-tachometer-alt');
     }
