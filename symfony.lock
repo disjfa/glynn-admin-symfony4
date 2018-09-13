@@ -233,9 +233,6 @@
     "symfony/intl": {
         "version": "v4.0.3"
     },
-    "symfony/lts": {
-        "version": "4-dev"
-    },
     "symfony/options-resolver": {
         "version": "v4.0.3"
     },
@@ -295,6 +292,9 @@
     },
     "symfony/templating": {
         "version": "v4.0.3"
+    },
+    "symfony/thanks": {
+        "version": "v1.1.0"
     },
     "symfony/translation": {
         "version": "3.3",
