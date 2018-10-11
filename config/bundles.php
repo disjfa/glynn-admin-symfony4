@@ -15,4 +15,5 @@ return [
     Disjfa\GlynnTemplateBundle\GlynnTemplateBundle::class => ['all' => true],
     Ornicar\GravatarBundle\OrnicarGravatarBundle::class => ['all' => true],
     Translation\Bundle\TranslationBundle::class => ['all' => true],
+    Disjfa\MenuBundle\DisjfaMenuBundle::class => ['all' => true],
 ];

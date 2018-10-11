@@ -2,7 +2,7 @@
 
 namespace App\Menu\Site;
 
-use App\Menu\ConfigureMenuEvent;
+use Disjfa\MenuBundle\Menu\ConfigureMenuEvent;
 use Symfony\Component\Translation\TranslatorInterface;
 
 class HomeMenuListener

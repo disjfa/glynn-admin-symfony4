@@ -8,6 +8,9 @@
     "disjfa/glynn-theme-bundle": {
         "version": "0.1.x-dev"
     },
+    "disjfa/menu-bundle": {
+        "version": "0.1.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {

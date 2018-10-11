@@ -2,7 +2,7 @@
 
 namespace App\Menu\Admin;
 
-use App\Menu\ConfigureMenuEvent;
+use Disjfa\MenuBundle\Menu\ConfigureMenuEvent;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 
@@ -21,6 +21,7 @@ class TranslatorMenuListener
      * MediaMenuListener constructor.
      *
      * @param TranslatorInterface $translator
+     * @param RouterInterface     $router
      */
     public function __construct(TranslatorInterface $translator, RouterInterface $router)
     {

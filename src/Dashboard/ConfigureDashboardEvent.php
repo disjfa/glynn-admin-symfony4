@@ -8,7 +8,7 @@ use Twig_Environment;
 
 class ConfigureDashboardEvent extends Event
 {
-    const NAME = 'glynn_admin.dashboard_items';
+    const NAME = 'admin.dashboard_items';
 
     /**
      * @var Twig_Environment

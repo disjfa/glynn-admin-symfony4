@@ -1,7 +1,5 @@
 require('bootstrap');
 require('./../css/site.scss');
-import '@fortawesome/fontawesome';
-import '@fortawesome/fontawesome-free-solid';
 import Vue from 'vue';
 
 // import a component from a bundle, when needed

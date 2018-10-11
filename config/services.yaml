@@ -26,34 +26,26 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    App\Menu\AdminMenuBuilder:
-        tags:
-          - { name: 'knp_menu.menu_builder', method: 'build', alias: 'glynn-admin' }
-
     App\Menu\Admin\UserMenuListener:
         autowire: true
         tags:
-          - { name: 'kernel.event_listener', event: 'glynn_admin.menu_configure', method: 'onMenuConfigure', priority: -50 }
+          - { name: 'kernel.event_listener', event: 'admin.menu_configure', method: 'onMenuConfigure', priority: -50 }
 
     App\Menu\Admin\TranslatorMenuListener:
         autowire: true
         tags:
-          - { name: 'kernel.event_listener', event: 'glynn_admin.menu_configure', method: 'onMenuConfigure', priority: -150 }
+          - { name: 'kernel.event_listener', event: 'admin.menu_configure', method: 'onMenuConfigure', priority: -150 }
 
     App\Menu\Admin\DashboardMenuListener:
         autowire: true
         tags:
-          - { name: 'kernel.event_listener', event: 'glynn_admin.menu_configure', method: 'onMenuConfigure', priority: 999 }
-
-    App\Menu\SiteMenuBuilder:
-        tags:
-          - { name: 'knp_menu.menu_builder', method: 'build', alias: 'glynn-site' }
+          - { name: 'kernel.event_listener', event: 'admin.menu_configure', method: 'onMenuConfigure', priority: 999 }
 
     App\Menu\Site\HomeMenuListener:
         autowire: true
         tags:
-          - { name: 'kernel.event_listener', event: 'glynn_site.menu_configure', method: 'onMenuConfigure', priority: 999 }
+          - { name: 'kernel.event_listener', event: 'site.menu_configure', method: 'onMenuConfigure', priority: 999 }
 
     App\Dashboard\DashboardExample:
         tags:
-          - { name: 'kernel.event_listener', event: 'glynn_admin.dashboard_items', method: 'get' }
+          - { name: 'kernel.event_listener', event: 'admin.dashboard_items', method: 'get' }
