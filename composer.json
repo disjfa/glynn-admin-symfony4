@@ -7,10 +7,10 @@
     "require": {
         "php": "^7.2.0",
         "ext-iconv": "*",
-        "disjfa/glynn-theme-bundle": "^0.2.0",
-        "disjfa/menu-bundle": "^0.1.1",
+        "disjfa/glynn-theme-bundle": "^0.3.0",
+        "disjfa/menu-bundle": "^0.2.0",
         "disjfa/pwa-bundle": "^0.1.0",
-        "disjfa/translation-bundle": "^0.1.0",
+        "disjfa/translation-bundle": "^0.2.1",
         "friendsofsymfony/user-bundle": "~2.0",
         "ornicar/gravatar-bundle": "^1.2",
         "php-translation/symfony-bundle": "^0.8.0",

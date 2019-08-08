@@ -4,7 +4,7 @@
     {{ 'admin.dashboard.page_title' | trans | desc('Hello glynn admin') }}
 {% endblock %}
 
-{% block body %}
+{% block content %}
     {% for item in dashboardItems.items %}
         {{ item | raw }}
     {% endfor %}

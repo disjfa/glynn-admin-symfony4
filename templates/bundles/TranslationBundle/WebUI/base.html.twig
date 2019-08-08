@@ -4,12 +4,12 @@
     {{ 'users.translation.page_title' | trans | desc('Translations') }}
 {% endblock %}
 
-{% block stylesheet %}
-    {{ parent() }}
+{% block head_stylesheets %}
+    <link rel="stylesheet" href="{{ asset("bundles/translation/css/bootstrap.4.1.1.min.css") }}">
     <link rel="stylesheet" href="{{ asset("bundles/translation/css/webui.css") }}">
 {% endblock %}
 
-{% block javascripts %}
+{% block body_javascript %}
     {{ parent() }}
     <script type="text/javascript" src="{{ asset("bundles/translation/js/webui.js") }}"></script>
 {% endblock %}
