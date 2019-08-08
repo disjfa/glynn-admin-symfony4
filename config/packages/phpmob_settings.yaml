@@ -1,0 +1,10 @@
+doctrine:
+    orm:
+        mappings:
+            PhpMobSettings:
+                type: xml
+                is_bundle: false
+                prefix: PhpMob\Settings\Model
+                dir: '%kernel.project_dir%/vendor/phpmob/settings-bundle/src/Resources/config/doctrine/model'
+
+phpmob_settings:

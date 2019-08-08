@@ -16,4 +16,9 @@ return [
     Ornicar\GravatarBundle\OrnicarGravatarBundle::class => ['all' => true],
     Translation\Bundle\TranslationBundle::class => ['all' => true],
     Disjfa\MenuBundle\DisjfaMenuBundle::class => ['all' => true],
+    Liip\ImagineBundle\LiipImagineBundle::class => ['all' => true],
+    PhpMob\SettingsBundle\PhpMobSettingsBundle::class => ['all' => true],
+    Disjfa\PwaBundle\DisjfaPwaBundle::class => ['all' => true],
+    Knp\Bundle\PaginatorBundle\KnpPaginatorBundle::class => ['all' => true],
+    Disjfa\TranslationBundle\DisjfaTranslationBundle::class => ['all' => true],
 ];

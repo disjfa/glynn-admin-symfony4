@@ -281,7 +281,7 @@
       </notes>
       <segment>
         <source>admin.menu.translations</source>
-        <target>Translations</target>
+        <target>Translations (dev)</target>
       </segment>
     </unit>
     <unit id="MlBIe97" name="admin.menu.users">
