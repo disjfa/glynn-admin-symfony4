@@ -19,9 +19,6 @@ class TranslatorMenuListener
 
     /**
      * MediaMenuListener constructor.
-     *
-     * @param TranslatorInterface $translator
-     * @param RouterInterface     $router
      */
     public function __construct(TranslatorInterface $translator, RouterInterface $router)
     {
@@ -29,9 +26,6 @@ class TranslatorMenuListener
         $this->router = $router;
     }
 
-    /**
-     * @param ConfigureMenuEvent $event
-     */
     public function onMenuConfigure(ConfigureMenuEvent $event)
     {
         if (null === $this->router->getRouteCollection()->get('translation_index')) {

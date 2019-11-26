@@ -3,10 +3,10 @@
 namespace App\Controller\Admin;
 
 use App\Dashboard\ConfigureDashboardEvent;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Twig_Environment;
+use Symfony\Component\Routing\Annotation\Route;
+use Twig\Environment;
 
 /**
  * @Route("/admin")
@@ -19,17 +19,14 @@ class DashboardController extends Controller
     private $eventDispatcher;
 
     /**
-     * @var Twig_Environment
+     * @var Environment
      */
     private $twig;
 
     /**
      * DashboardController constructor.
-     *
-     * @param EventDispatcherInterface $eventDispatcher
-     * @param Twig_Environment         $twig
      */
-    public function __construct(EventDispatcherInterface $eventDispatcher, Twig_Environment $twig)
+    public function __construct(EventDispatcherInterface $eventDispatcher, Environment $twig)
     {
         $this->eventDispatcher = $eventDispatcher;
         $this->twig = $twig;

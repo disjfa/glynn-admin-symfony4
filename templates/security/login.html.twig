@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'site.header.login' | trans }}{% endblock %}
+
+{% block body %}
+    <div class="row justify-content-md-center py-3">
+        <div class="col-md-6">
+            <form method="post">
+                <div class="card bg-light">
+                    <div class="card-header bg-primary text-white">
+                        <i class="fa fa-user"></i>
+                        {{ 'site.header.login' | trans }}
+                    </div>
+                    <div class="card-body">
+                        {% if error %}
+                            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
+                        {% if app.user %}
+                            <div class="mb-3">
+                                {{ 'site.message.loggedin' | trans({'%username%': app.user.username}) }}
+
+                                <a href="{{ path('app_logout') }}">{{ 'site.button.logout' | trans }}Logout</a>
+                            </div>
+                        {% endif %}
+                        <div class="form-group">
+                            <label for="input-email">{{ 'site.label.email' | trans }}Email</label>
+                            <input type="email" value="{{ last_username }}" name="email" id="input-email" class="form-control" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="input=password">{{ 'site.label.password' | trans }}Password</label>
+                            <input type="password" name="password" id="input=password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="_remember_me" id="remember_me">
+                            <label for="remember_me">
+                                {{ 'site.label.remember_me' | trans }}
+                                Remember me
+                            </label>
+                        </div>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fa fa-sign-in-alt"></i>
+                            {{ 'site.button.login' | trans }}
+                            Sign in
+                        </button>
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

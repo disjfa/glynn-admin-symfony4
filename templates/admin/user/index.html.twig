@@ -4,20 +4,17 @@
     {{ 'users.index.title' | trans | desc('Users') }} - {{ parent() }}
 {% endblock %}
 
-{% block page_title_text %}
+{% block content_title %}
     {{ 'users.index.page_title' | trans | desc('Users') }}
 {% endblock %}
 
-{% block content %}
+{% block body %}
     <div class="container">
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>{{ 'users.table.username' | trans | desc('Username') }}</th>
                     <th>{{ 'users.table.email' | trans | desc('Email') }}</th>
-                    <th>{{ 'users.table.enabled' | trans | desc('Enabled') }}</th>
-                    <th>{{ 'users.table.last_lgin' | trans  | desc('Last login') }}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -25,21 +22,8 @@
                     <tr>
                         <td>
                             <a href="{{ path('admin_user_show', {'user': user.id}) }}">
-                                {{ user.username }}
+                                {{ user.email }}
                             </a>
-                        </td>
-                        <td>
-                            {{ user.email }}
-                        </td>
-                        <td>
-                            {{ user.enabled }}
-                        </td>
-                        <td>
-                            {% if user.lastLogin %}
-                                {{ user.lastLogin | date }}
-                            {% else %}
-                                <i class="fa fa-minus"></i>
-                            {% endif %}
                         </td>
                     </tr>
                 {% endfor %}

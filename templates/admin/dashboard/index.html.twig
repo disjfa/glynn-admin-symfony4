@@ -1,10 +1,10 @@
 {% extends "admin.html.twig" %}
 
-{% block page_title_text %}
+{% block content_title %}
     {{ 'admin.dashboard.page_title' | trans | desc('Hello glynn admin') }}
 {% endblock %}
 
-{% block content %}
+{% block body %}
     {% for item in dashboardItems.items %}
         {{ item | raw }}
     {% endfor %}

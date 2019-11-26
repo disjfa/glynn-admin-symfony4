@@ -4,11 +4,11 @@
     {{ 'user.show_user.title' | trans({'%username%': user.username }) | desc('User %username%') }} - {{ parent() }}
 {% endblock %}
 
-{% block page_title_text %}
+{% block content_title %}
     {{ 'user.show_user.page_title' | trans({'%username%': user.username }) | desc('User %username%') }}
 {% endblock %}
 
-{% block content %}
+{% block body %}
     <div class="container">
         <br>
         <div class="row">

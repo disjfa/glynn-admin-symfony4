@@ -1,1 +1,31 @@
 {% extends "@GlynnTemplate/admin.html.twig" %}
+
+{% block header_user_menu %}
+    {% if app.user %}
+        <div class="dropdown float-right">
+            <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn text-muted">
+                <i class="fa fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="{{ path('app_logout') }}">
+                    <i class="fa fa-sign-out-alt"></i> {{ 'admin.nav.logout' | trans }}
+                </a>
+            </div>
+        </div>
+        <div class="sidebar-user">
+            <div class="media">
+                <div class="media-left">
+                    <img src="{{ gravatar(app.user.email) }}"
+                         class="rounded img-fluid sidebar-user-img pr-3"
+                         alt="{{ 'admin.nav.profile_image' | trans }}">
+                </div>
+                <div class="media-body">
+                    <strong class="media-heading">
+                        {{ app.user.username }}
+                    </strong>
+                    {{ app.user.email }}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

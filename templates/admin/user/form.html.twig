@@ -4,11 +4,11 @@
     {{ 'user.form.title' | trans | desc('User') }} - {{ parent() }}
 {% endblock %}
 
-{% block page_title_text %}
+{% block content_title %}
     {{ 'user.form.page_title' | trans | desc('User') }}
 {% endblock %}
 
-{% block content %}
+{% block body %}
     <div class="container py-3">
         {{ form_start(form) }}
         {{ form_rest(form) }}

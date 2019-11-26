@@ -14,17 +14,12 @@ class DashboardMenuListener
 
     /**
      * MediaMenuListener constructor.
-     *
-     * @param TranslatorInterface $translator
      */
     public function __construct(TranslatorInterface $translator)
     {
         $this->translator = $translator;
     }
 
-    /**
-     * @param ConfigureMenuEvent $event
-     */
     public function onMenuConfigure(ConfigureMenuEvent $event)
     {
         $menu = $event->getMenu();

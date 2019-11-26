@@ -1,1 +1,19 @@
 {% extends "@GlynnTemplate/base.html.twig" %}
+
+{% block user_menu_logged_in %}
+    <li class="nav-item">
+        <a href="{{ path('app_logout') }}" class="nav-link">
+            <i class="fa fa-sign-out-alt"></i>
+            {{ 'site.navbar.logout' | trans }}
+        </a>
+    </li>
+{% endblock %}
+
+{% block user_menu_logged_out %}
+    <li class="nav-item">
+        <a href="{{ path('app_login') }}" class="nav-link">
+            <i class="fa fa-user"></i>
+            {{ 'site.navbar.login' | trans }}
+        </a>
+    </li>
+{% endblock %}

@@ -7,8 +7,6 @@ use Symfony\Component\Form\Form;
 class Serializer
 {
     /**
-     * @param Form $form
-     *
      * @return array
      */
     public static function serialize(Form $form)

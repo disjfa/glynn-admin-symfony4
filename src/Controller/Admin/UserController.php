@@ -2,43 +2,50 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\User;
 use App\Form\Type\UserType;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use App\Repository\UserRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Entity\User;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/admin/users")
  */
-class UserController extends Controller
+class UserController extends AbstractController
 {
+    /**
+     * @var UserRepository
+     */
+    private $userRepository;
+
+    public function __construct(UserRepository $userRepository)
+    {
+        $this->userRepository = $userRepository;
+    }
+
     /**
      * @Route("", name="admin_user_index")
      *
      * @return Response
      */
-    public function indexAction()
+    public function index()
     {
         return $this->render('admin/user/index.html.twig', [
-            'users' => $this->get('fos_user.user_manager')->findUsers(),
+            'users' => $this->userRepository->findAll(),
         ]);
     }
 
     /**
-     * @param User    $user
-     * @param Request $request
-     *
-     * @return Response
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
      */
     private function handleUserForm(User $user, Request $request)
     {
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $user->setEnabled(true);
-            if (null === $user->getPassword()) {
+            if ( ! $user->getPassword()) {
                 $user->setPassword(uniqid());
             }
 
@@ -58,9 +65,9 @@ class UserController extends Controller
      *
      * @return Response
      */
-    public function createAction(Request $request)
+    public function create(Request $request)
     {
-        $user = $this->get('fos_user.user_manager')->createUser();
+        $user = new User();
 
         return $this->handleUserForm($user, $request);
     }
@@ -68,7 +75,7 @@ class UserController extends Controller
     /**
      * @Route("/{user}", name="admin_user_show")
      */
-    public function showAction(User $user)
+    public function show(User $user)
     {
         return $this->render('admin/user/show.html.twig', [
             'user' => $user,
@@ -78,12 +85,9 @@ class UserController extends Controller
     /**
      * @Route("/{user}/edit", name="admin_user_edit")
      *
-     * @param User    $user
-     * @param Request $request
-     *
      * @return Response
      */
-    public function editAction(User $user, Request $request)
+    public function edit(User $user, Request $request)
     {
         return $this->handleUserForm($user, $request);
     }
