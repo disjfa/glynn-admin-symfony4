@@ -48,17 +48,17 @@ phpmob_settings:
                                 portrait: portrait
                 background_color:
                     label: Background color
-                    value: '#2ecc71'
+                    value: '#34495e'
                     blueprint:
                         type: Symfony\Component\Form\Extension\Core\Type\ColorType
                 theme_color:
                     label: Theme color
-                    value: '#2980b9'
+                    value: '#ecf0f1'
                     blueprint:
                         type: Symfony\Component\Form\Extension\Core\Type\ColorType
-#                favicon:
-#                    label: Icon
-#                    value: '/pwa-icon.png'
+                favicon:
+                    label: Icon
+                    value: '/pwa-icon.png'
 #                    blueprint:
 #                        type: Disjfa\MediaBundle\Form\Type\MediaType
 

@@ -1,0 +1,3 @@
+disjfa_pwa:
+    resource: '@DisjfaPwaBundle/Controller/'
+    type:     annotation
