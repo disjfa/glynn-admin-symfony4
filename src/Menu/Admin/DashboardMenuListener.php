@@ -2,10 +2,11 @@
 
 namespace App\Menu\Admin;
 
-use Disjfa\MenuBundle\Menu\ConfigureMenuEvent;
-use Symfony\Component\Translation\TranslatorInterface;
+use Disjfa\MenuBundle\Menu\ConfigureAdminMenu;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
-class DashboardMenuListener
+class DashboardMenuListener implements EventSubscriberInterface
 {
     /**
      * @var TranslatorInterface
@@ -20,12 +21,22 @@ class DashboardMenuListener
         $this->translator = $translator;
     }
 
-    public function onMenuConfigure(ConfigureMenuEvent $event)
+    public function onMenuConfigure(ConfigureAdminMenu $event)
     {
         $menu = $event->getMenu();
         $menu->addChild('dashboard', [
             'label' => $this->translator->trans('admin.menu.dashboard'),
             'route' => 'admin_dashboard_index',
         ])->setExtra('icon', 'fa-tachometer-alt');
+    }
+
+    /**
+     * @return array
+     */
+    public static function getSubscribedEvents()
+    {
+        return [
+            ConfigureAdminMenu::class => ['onMenuConfigure', 999],
+        ];
     }
 }

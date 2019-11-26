@@ -3,15 +3,13 @@
 namespace App\Dashboard;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Symfony\Component\EventDispatcher\Event;
-use Twig_Environment;
+use Symfony\Contracts\EventDispatcher\Event;
+use Twig\Environment;
 
 class ConfigureDashboardEvent extends Event
 {
-    const NAME = 'admin.dashboard_items';
-
     /**
-     * @var Twig_Environment
+     * @var Environment
      */
     private $twig;
 
@@ -23,14 +21,14 @@ class ConfigureDashboardEvent extends Event
     /**
      * ConfigureDashboardEvent constructor.
      */
-    public function __construct(Twig_Environment $twig)
+    public function __construct(Environment $twig)
     {
         $this->twig = $twig;
         $this->items = new ArrayCollection();
     }
 
     /**
-     * @return Twig_Environment
+     * @return Environment
      */
     public function getTwig()
     {

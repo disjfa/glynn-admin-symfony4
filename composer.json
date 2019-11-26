@@ -24,7 +24,6 @@
         "php": "^7.2.5",
         "ext-iconv": "*",
         "disjfa/glynn-theme-bundle": "^0.4.2",
-        "disjfa/menu-bundle": "^0.2.0",
         "disjfa/pwa-bundle": "^0.1.0",
         "disjfa/translation-bundle": "^0.4.0",
         "ornicar/gravatar-bundle": "^1.2",

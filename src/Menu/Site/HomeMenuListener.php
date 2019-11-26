@@ -2,10 +2,11 @@
 
 namespace App\Menu\Site;
 
-use Disjfa\MenuBundle\Menu\ConfigureMenuEvent;
-use Symfony\Component\Translation\TranslatorInterface;
+use Disjfa\MenuBundle\Menu\ConfigureSiteMenu;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
-class HomeMenuListener
+class HomeMenuListener implements EventSubscriberInterface
 {
     /**
      * @var TranslatorInterface
@@ -20,7 +21,7 @@ class HomeMenuListener
         $this->translator = $translator;
     }
 
-    public function onMenuConfigure(ConfigureMenuEvent $event)
+    public function onMenuConfigure(ConfigureSiteMenu $event)
     {
         $menu = $event->getMenu();
 
@@ -28,5 +29,15 @@ class HomeMenuListener
             'route' => 'home_index',
             'label' => $this->translator->trans('site.menu.home'),
         ])->setExtra('icon', 'fa-home');
+    }
+
+    /**
+     * @return array
+     */
+    public static function getSubscribedEvents()
+    {
+        return [
+            ConfigureSiteMenu::class => ['onMenuConfigure', 999],
+        ];
     }
 }

@@ -26,22 +26,3 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    App\Menu\Admin\UserMenuListener:
-        tags:
-          - { name: 'kernel.event_listener', event: 'admin.menu_configure', method: 'onMenuConfigure', priority: -50 }
-
-    App\Menu\Admin\TranslatorMenuListener:
-        tags:
-          - { name: 'kernel.event_listener', event: 'admin.menu_configure', method: 'onMenuConfigure', priority: -150 }
-
-    App\Menu\Admin\DashboardMenuListener:
-        tags:
-          - { name: 'kernel.event_listener', event: 'admin.menu_configure', method: 'onMenuConfigure', priority: 999 }
-
-    App\Menu\Site\HomeMenuListener:
-        tags:
-          - { name: 'kernel.event_listener', event: 'site.menu_configure', method: 'onMenuConfigure', priority: 999 }
-
-    App\Dashboard\DashboardExample:
-        tags:
-          - { name: 'kernel.event_listener', event: 'admin.dashboard_items', method: 'get' }

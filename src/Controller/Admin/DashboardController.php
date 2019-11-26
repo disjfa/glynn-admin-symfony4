@@ -3,7 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Dashboard\ConfigureDashboardEvent;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
@@ -11,7 +11,7 @@ use Twig\Environment;
 /**
  * @Route("/admin")
  */
-class DashboardController extends Controller
+class DashboardController extends AbstractController
 {
     /**
      * @var EventDispatcherInterface
@@ -23,9 +23,6 @@ class DashboardController extends Controller
      */
     private $twig;
 
-    /**
-     * DashboardController constructor.
-     */
     public function __construct(EventDispatcherInterface $eventDispatcher, Environment $twig)
     {
         $this->eventDispatcher = $eventDispatcher;
@@ -39,10 +36,7 @@ class DashboardController extends Controller
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
-        $dashboardItems = $this->eventDispatcher->dispatch(
-            ConfigureDashboardEvent::NAME,
-            new ConfigureDashboardEvent($this->twig)
-        );
+        $dashboardItems = $this->eventDispatcher->dispatch(new ConfigureDashboardEvent($this->twig));
 
         return $this->render('admin/dashboard/index.html.twig', [
             'dashboardItems' => $dashboardItems,
