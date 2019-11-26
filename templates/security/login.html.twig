@@ -18,8 +18,7 @@
                         {% if app.user %}
                             <div class="mb-3">
                                 {{ 'site.message.loggedin' | trans({'%username%': app.user.username}) }}
-
-                                <a href="{{ path('app_logout') }}">{{ 'site.button.logout' | trans }}Logout</a>
+                                <a href="{{ path('app_logout') }}">{{ 'site.button.logout' | trans }}</a>
                             </div>
                         {% endif %}
                         <div class="form-group">
@@ -27,20 +26,18 @@
                             <input type="email" value="{{ last_username }}" name="email" id="input-email" class="form-control" required autofocus>
                         </div>
                         <div class="form-group">
-                            <label for="input=password">{{ 'site.label.password' | trans }}Password</label>
+                            <label for="input=password">{{ 'site.label.password' | trans }}</label>
                             <input type="password" name="password" id="input=password" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="_remember_me" id="remember_me">
                             <label for="remember_me">
                                 {{ 'site.label.remember_me' | trans }}
-                                Remember me
                             </label>
                         </div>
                         <button class="btn btn-primary" type="submit">
                             <i class="fa fa-sign-in-alt"></i>
                             {{ 'site.button.login' | trans }}
-                            Sign in
                         </button>
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                     </div>
