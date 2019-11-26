@@ -32,8 +32,10 @@ npm run dev
 
 ## Serve
 
+Start a server using the [symfony commandline tool](https://symfony.com/download)
+
 ```
-bin/console server:start
+symfony server:start -d
 ```
 
 ## The basic setup
@@ -46,6 +48,7 @@ We use [symfony](https://symfony.com) with these recepies:
 * var-dumper
 * server
 * security
+* make
 
 Next we add these bundles
 

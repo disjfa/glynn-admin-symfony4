@@ -84,6 +84,10 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "pre-commit": [
+            "php-cs-fixer fix",
+            "bin/console lint:twig"
         ]
     },
     "conflict": {
