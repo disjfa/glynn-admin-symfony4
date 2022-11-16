@@ -23,7 +23,7 @@
   ],
   "homepage": "https://github.com/disjfa/symfony4-glynn-admin#readme",
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.27.0",
+    "@symfony/webpack-encore": "^4.1.1",
     "autoprefixer": "^9.7.2",
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
